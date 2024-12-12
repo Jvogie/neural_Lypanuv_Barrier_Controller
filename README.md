@@ -1,6 +1,6 @@
 # Neural Lyapunov Barrier Controller
 
-This repository contains the implementation of a Neural Lyapunov Barrier Controller, which combines neural networks with control theory for safe and stable control of dynamical systems. The project specifically focuses on satellite control applications in space environments.
+This repository contains the results of a Neural Lyapunov Barrier Controller, which combines neural networks with control theory for safe and stable control of dynamical systems. The project specifically focuses on satellite control applications in space environments.
 
 ## Project Overview
 
