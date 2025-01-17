@@ -1,0 +1,115 @@
+{
+    "evaluation_config": {
+        "n_runs": 5,
+        "max_obstacles": 6,
+        "starting_points": [
+            [
+                15.0,
+                0.0,
+                0.0
+            ],
+            [
+                -15.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                15.0,
+                0.0
+            ],
+            [
+                0.0,
+                -15.0,
+                0.0
+            ]
+        ],
+        "total_time": "0:32:09"
+    },
+    "results_by_obstacle_count": {
+        "1": {
+            "neural_clbf": {
+                "success_rate": 1.0,
+                "collision_rate": 0.0
+            },
+            "lqr": {
+                "success_rate": 1.0,
+                "collision_rate": 0.0
+            },
+            "mpc": {
+                "success_rate": 1.0,
+                "collision_rate": 0.0
+            }
+        },
+        "2": {
+            "neural_clbf": {
+                "success_rate": 0.8,
+                "collision_rate": 0.2
+            },
+            "lqr": {
+                "success_rate": 0.8,
+                "collision_rate": 0.2
+            },
+            "mpc": {
+                "success_rate": 0.8,
+                "collision_rate": 0.2
+            }
+        },
+        "3": {
+            "neural_clbf": {
+                "success_rate": 0.6,
+                "collision_rate": 0.4
+            },
+            "lqr": {
+                "success_rate": 0.4,
+                "collision_rate": 0.6
+            },
+            "mpc": {
+                "success_rate": 0.8,
+                "collision_rate": 0.2
+            }
+        },
+        "4": {
+            "neural_clbf": {
+                "success_rate": 0.4,
+                "collision_rate": 0.6
+            },
+            "lqr": {
+                "success_rate": 0.6,
+                "collision_rate": 0.4
+            },
+            "mpc": {
+                "success_rate": 0.6,
+                "collision_rate": 0.4
+            }
+        },
+        "5": {
+            "neural_clbf": {
+                "success_rate": 0.8,
+                "collision_rate": 0.2
+            },
+            "lqr": {
+                "success_rate": 0.4,
+                "collision_rate": 0.6
+            },
+            "mpc": {
+                "success_rate": 0.6,
+                "collision_rate": 0.4
+            }
+        },
+        "6": {
+            "neural_clbf": {
+                "success_rate": 0.6,
+                "collision_rate": 0.4
+            },
+            "lqr": {
+                "success_rate": 0.6,
+                "collision_rate": 0.4
+            },
+            "mpc": {
+                "success_rate": 0.8,
+                "collision_rate": 0.2
+            }
+        }
+    }
+}

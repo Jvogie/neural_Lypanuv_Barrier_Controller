@@ -1,0 +1,72 @@
+<mujoco model="astrobee">
+    <compiler angle="radian" coordinate="local"/>
+    <option timestep="0.01" gravity="0 0 0"/>
+
+    <asset>
+        <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512"/>
+        <texture name="grid" type="2d" builtin="checker" rgb1=".1 .2 .3" rgb2=".2 .3 .4" width="512" height="512" mark="edge" markrgb=".8 .8 .8"/>
+        <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance="0.2"/>
+    </asset>
+
+    <default>
+        <joint damping="0.1"/>
+    </default>
+
+    <worldbody>
+        <!-- Multiple light sources -->
+        <light name="spotlight" pos="0 0 10" dir="0 0 -1" cutoff="60" diffuse=".8 .8 .8" specular=".3 .3 .3"/>
+        <light name="side1" pos="10 0 5" dir="-1 0 -0.3" cutoff="60" diffuse=".5 .5 .5" specular=".2 .2 .2"/>
+        <light name="side2" pos="-10 0 5" dir="1 0 -0.3" cutoff="60" diffuse=".5 .5 .5" specular=".2 .2 .2"/>
+
+        <!-- Camera -->
+        <camera name="main_camera" pos="0 -10 5" xyaxes="1 0 0 0 0.5 1"/>
+
+        <!-- Astrobee body -->
+        <body name="astrobee" pos="0 0 0">
+            <!-- Joints for x, y, z translations -->
+            <joint name="root_x" type="slide" axis="1 0 0" pos="0 0 0"/>
+            <joint name="root_y" type="slide" axis="0 1 0" pos="0 0 0"/>
+            <joint name="root_z" type="slide" axis="0 0 1" pos="0 0 0"/>
+            <!-- Joints for rotations -->
+            <joint name="root_roll" type="hinge" axis="1 0 0" pos="0 0 0"/>
+            <joint name="root_pitch" type="hinge" axis="0 1 0" pos="0 0 0"/>
+            <joint name="root_yaw" type="hinge" axis="0 0 1" pos="0 0 0"/>
+            
+            <!-- Main body -->
+            <geom name="body" type="box" size="0.15 0.2 0.15" rgba="0.2 0.2 0.8 1" mass="1"/>
+            <!-- Thrusters -->
+            <geom name="thruster_x+" type="cylinder" pos="0.15 0 0" size="0.03 0.05" rgba="0.7 0.7 0.7 1" euler="0 1.57 0"/>
+            <geom name="thruster_x-" type="cylinder" pos="-0.15 0 0" size="0.03 0.05" rgba="0.7 0.7 0.7 1" euler="0 1.57 0"/>
+            <geom name="thruster_y+" type="cylinder" pos="0 0.2 0" size="0.03 0.05" rgba="0.7 0.7 0.7 1" euler="1.57 0 0"/>
+            <geom name="thruster_y-" type="cylinder" pos="0 -0.2 0" size="0.03 0.05" rgba="0.7 0.7 0.7 1" euler="1.57 0 0"/>
+        </body>
+        
+        <!-- Goal marker -->
+        <body name="goal" pos="5 2 -1">
+            <geom type="sphere" size="0.1" rgba="0 1 0 0.7"/>
+        </body>
+
+        <!-- Obstacle -->
+        <geom name="obstacle" type="box" size="1.0 1.0 1.0" pos="0 1 0" rgba="1 0 0 0.7"/>
+
+        <!-- Floor -->
+        <geom name="floor" type="plane" size="10 10 0.1" rgba="0.5 0.5 0.5 1" pos="0 0 -2"/>
+
+        <!-- Waypoint markers -->
+        <body name="waypoints">
+            <!-- This will be dynamically populated by the simulation script if needed -->
+        </body>
+    </worldbody>
+
+    <actuator>
+        <!-- Translation actuators with force limits -->
+        <motor joint="root_x" name="translate_x" gear="0.68" ctrlrange="-1 1"/>
+        <motor joint="root_y" name="translate_y" gear="0.332" ctrlrange="-1 1"/>
+        <motor joint="root_z" name="translate_z" gear="0.394" ctrlrange="-1 1"/>
+        
+        <!-- Rotation actuators with torque limits -->
+        <motor joint="root_roll" name="rotate_roll" gear="0.068" ctrlrange="-1 1"/>
+        <motor joint="root_pitch" name="rotate_pitch" gear="0.0332" ctrlrange="-1 1"/>
+        <motor joint="root_yaw" name="rotate_yaw" gear="0.0394" ctrlrange="-1 1"/>
+    </actuator>
+</mujoco>

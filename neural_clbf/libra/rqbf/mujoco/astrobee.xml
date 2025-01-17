@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="astrobee">
+    <compiler angle="radian" coordinate="local" />
+    <option timestep="0.01" gravity="0 0 0" />
+
+    <asset>
+        <texture type="skybox" builtin="gradient" rgb1="0.6 0.8 1.0" rgb2="0.2 0.4 0.6" width="512" height="512" />
+        <texture name="grid" type="2d" builtin="checker" rgb1=".4 .5 .6" rgb2=".5 .6 .7" width="512" height="512" mark="edge" markrgb=".8 .8 .8" />
+        <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance="0.4" />
+    </asset>
+
+    <default>
+        <joint damping="0.1" />
+    </default>
+
+    <worldbody>
+        <geom name="floor" pos="0 0 0" size="20 20 0.001" type="plane" material="grid" conaffinity="0" contype="0" />
+        
+        <light name="spotlight" pos="0 0 10" dir="0 0 -1" cutoff="60" diffuse=".8 .8 .8" specular=".3 .3 .3" />
+        <light name="side1" pos="10 0 5" dir="-1 0 -0.3" cutoff="60" diffuse=".5 .5 .5" specular=".2 .2 .2" />
+        <light name="side2" pos="-10 0 5" dir="1 0 -0.3" cutoff="60" diffuse=".5 .5 .5" specular=".2 .2 .2" />
+
+        <body name="astrobee" pos="0 0 0">
+            <joint name="x_joint" type="slide" axis="1 0 0" range="-100 100" />
+            <joint name="y_joint" type="slide" axis="0 1 0" range="-100 100" />
+            <joint name="z_joint" type="slide" axis="0 0 1" range="-100 100" />
+            
+            <joint name="roll_joint" type="hinge" axis="1 0 0" range="-3.14159 3.14159" />
+            <joint name="pitch_joint" type="hinge" axis="0 1 0" range="-3.14159 3.14159" />
+            <joint name="yaw_joint" type="hinge" axis="0 0 1" range="-3.14159 3.14159" />
+            
+            <geom type="box" size="0.15 0.15 0.15" rgba="0.2 0.2 0.8 1" />
+            
+            <geom type="sphere" size="0.26" rgba="0.2 0.2 0.8 0.2" />
+        </body>
+        
+    <body name="obstacle1" pos="10.226759910583496 -0.5244704484939575 0.38748037815093994"><geom name="obstacle1" type="sphere" size="1.3988245725631714" rgba="1 0 0 0.5" /></body><body name="obstacle2" pos="-8.884520530700684 3.11629056930542 -0.7946888208389282"><geom name="obstacle2" type="sphere" size="1.0473180413246155" rgba="1 0 0 0.5" /></body><body name="obstacle3" pos="-8.195037841796875 -3.209819793701172 -0.13880956172943115"><geom name="obstacle3" type="sphere" size="0.6390843391418457" rgba="1 0 0 0.5" /></body><body name="obstacle4" pos="4.97833251953125 -2.304154634475708 -0.07048380374908447"><geom name="obstacle4" type="sphere" size="1.173067033290863" rgba="1 0 0 0.5" /></body><body name="obstacle5" pos="4.104848861694336 5.039748191833496 0.5798871517181396"><geom name="obstacle5" type="sphere" size="1.3709404468536377" rgba="1 0 0 0.5" /></body><body name="obstacle6" pos="-0.8059835433959961 3.8711798191070557 0.5856525897979736"><geom name="obstacle6" type="sphere" size="1.4848071932792664" rgba="1 0 0 0.5" /></body><site name="goal" pos="1.0 -3.0 1.0" size="1.5" type="sphere" rgba="0 1 0 0.7" /></worldbody>
+
+    <actuator>
+        <motor joint="x_joint" name="translate_x" gear="0.849" ctrlrange="-1 1" />
+        <motor joint="y_joint" name="translate_y" gear="0.849" ctrlrange="-1 1" />
+        <motor joint="z_joint" name="translate_z" gear="0.849" ctrlrange="-1 1" />
+        
+        <motor joint="roll_joint" name="rotate_roll" gear="0.1" ctrlrange="-1 1" />
+        <motor joint="pitch_joint" name="rotate_pitch" gear="0.1" ctrlrange="-1 1" />
+        <motor joint="yaw_joint" name="rotate_yaw" gear="0.1" ctrlrange="-1 1" />
+    </actuator>
+</mujoco>

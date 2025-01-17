@@ -1,0 +1,14 @@
+{
+    "neural_clbf": {
+        "success_rate": 0.6,
+        "collision_rate": 0.4
+    },
+    "lqr": {
+        "success_rate": 0.6,
+        "collision_rate": 0.4
+    },
+    "mpc": {
+        "success_rate": 0.8,
+        "collision_rate": 0.2
+    }
+}

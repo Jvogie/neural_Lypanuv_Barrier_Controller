@@ -1,0 +1,38 @@
+{
+    "neural_clbf": {
+        "1_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6674207800741373,
+            "average_fuel_cost": 92493.40699867904,
+            "average_safety_score": 0.5983175604626709,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        }
+    },
+    "lqr": {
+        "1_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6614332099035374,
+            "average_fuel_cost": 2503.5676313009258,
+            "average_safety_score": 0.5214659685863874,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        }
+    },
+    "mpc": {
+        "1_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6715692216838387,
+            "average_fuel_cost": 1570.3364633405895,
+            "average_safety_score": 0.5661605206073753,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        }
+    }
+}

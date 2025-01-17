@@ -1,0 +1,80 @@
+{
+    "neural_clbf": {
+        "1 obstacle(s)": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0
+        },
+        "2 obstacle(s)": {
+            "success_rate": 0.8,
+            "collision_rate": 0.2
+        },
+        "3 obstacle(s)": {
+            "success_rate": 0.6,
+            "collision_rate": 0.4
+        },
+        "4 obstacle(s)": {
+            "success_rate": 0.4,
+            "collision_rate": 0.6
+        },
+        "5 obstacle(s)": {
+            "success_rate": 0.8,
+            "collision_rate": 0.2
+        },
+        "6 obstacle(s)": {
+            "success_rate": 0.6,
+            "collision_rate": 0.4
+        }
+    },
+    "lqr": {
+        "1 obstacle(s)": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0
+        },
+        "2 obstacle(s)": {
+            "success_rate": 0.8,
+            "collision_rate": 0.2
+        },
+        "3 obstacle(s)": {
+            "success_rate": 0.4,
+            "collision_rate": 0.6
+        },
+        "4 obstacle(s)": {
+            "success_rate": 0.6,
+            "collision_rate": 0.4
+        },
+        "5 obstacle(s)": {
+            "success_rate": 0.4,
+            "collision_rate": 0.6
+        },
+        "6 obstacle(s)": {
+            "success_rate": 0.6,
+            "collision_rate": 0.4
+        }
+    },
+    "mpc": {
+        "1 obstacle(s)": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0
+        },
+        "2 obstacle(s)": {
+            "success_rate": 0.8,
+            "collision_rate": 0.2
+        },
+        "3 obstacle(s)": {
+            "success_rate": 0.8,
+            "collision_rate": 0.2
+        },
+        "4 obstacle(s)": {
+            "success_rate": 0.6,
+            "collision_rate": 0.4
+        },
+        "5 obstacle(s)": {
+            "success_rate": 0.6,
+            "collision_rate": 0.4
+        },
+        "6 obstacle(s)": {
+            "success_rate": 0.8,
+            "collision_rate": 0.2
+        }
+    }
+}

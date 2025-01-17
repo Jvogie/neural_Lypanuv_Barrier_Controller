@@ -1,0 +1,128 @@
+{
+    "neural_clbf": {
+        "1_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6457207460432695,
+            "average_fuel_cost": 94522.24058692157,
+            "average_safety_score": 0.6030494216614091,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "2_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6453055804449723,
+            "average_fuel_cost": 92982.3429659009,
+            "average_safety_score": 0.5972660357518402,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "3_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.7893454057803544,
+            "average_fuel_cost": 33243.21895301342,
+            "average_safety_score": 0.5771604938271605,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "4_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6370811951110238,
+            "average_fuel_cost": 89578.88393083215,
+            "average_safety_score": 0.6062039957939012,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        }
+    },
+    "lqr": {
+        "1_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6408839496367457,
+            "average_fuel_cost": 2503.5676313009258,
+            "average_safety_score": 0.5214659685863874,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "2_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6398491988432241,
+            "average_fuel_cost": 2503.5676313009258,
+            "average_safety_score": 0.5214659685863874,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "3_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6410293350185512,
+            "average_fuel_cost": 2503.5676313009258,
+            "average_safety_score": 0.5214659685863874,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "4_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6310386201987592,
+            "average_fuel_cost": 2503.5676313009258,
+            "average_safety_score": 0.5214659685863874,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        }
+    },
+    "mpc": {
+        "1_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6501780446773653,
+            "average_fuel_cost": 1570.3364633405895,
+            "average_safety_score": 0.5661605206073753,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "2_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6491763841505556,
+            "average_fuel_cost": 1570.3364633405895,
+            "average_safety_score": 0.5661605206073753,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "3_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6504350560203744,
+            "average_fuel_cost": 1570.3364633405895,
+            "average_safety_score": 0.5661605206073753,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        },
+        "4_obstacles": {
+            "success_rate": 1.0,
+            "collision_rate": 0.0,
+            "average_efficiency": 0.6398106877340886,
+            "average_fuel_cost": 1570.3364633405895,
+            "average_safety_score": 0.5661605206073753,
+            "total_runs": 1,
+            "successful_runs": 1,
+            "collisions": 0
+        }
+    }
+}

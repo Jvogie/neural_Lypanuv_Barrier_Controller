@@ -1,0 +1,34 @@
+<mujoco>
+    <option gravity="0 0 0" />
+    
+    <asset>
+        <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512"/>
+        <texture name="stars" type="cube" builtin="checker" rgb1="1 1 1" rgb2="0 0 0" width="512" height="512" mark="edge" markrgb="1 1 1"/>
+        <material name="stars" texture="stars" texrepeat="1 1" texuniform="true" reflectance="0.2"/>
+    </asset>
+
+    <worldbody>
+        <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>
+        <geom type="plane" size="50 50 0.1" pos="0 0 -10" material="stars"/>
+        
+        <body name="agent" pos="5 0 0">
+            <joint name="agent_x" type="slide" axis="1 0 0"/>
+            <joint name="agent_y" type="slide" axis="0 1 0"/>
+            <joint name="agent_z" type="slide" axis="0 0 1"/>
+            <geom type="box" size="0.1 0.1 0.1" rgba="0 0 1 1"/>
+        </body>
+        
+        <body name="target" pos="0 0 0">
+            <joint name="target_x" type="slide" axis="1 0 0"/>
+            <joint name="target_y" type="slide" axis="0 1 0"/>
+            <joint name="target_z" type="slide" axis="0 0 1"/>
+            <geom type="box" size="0.2 0.2 0.2" rgba="1 0 0 1"/>
+        </body>
+    </worldbody>
+
+    <actuator>
+        <motor joint="agent_x" ctrlrange="-1 1" />
+        <motor joint="agent_y" ctrlrange="-1 1" />
+        <motor joint="agent_z" ctrlrange="-1 1" />
+    </actuator>
+</mujoco>
