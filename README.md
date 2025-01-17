@@ -60,6 +60,34 @@ The project implements multiple control strategies and compares their performanc
 
 Each controller is tested across various scenarios with different complexity levels to evaluate their effectiveness and robustness.
 
+## Libra Components
+
+The project includes significant additions in the `libra` folder, which contains several key components:
+
+### RBQF (Rattle Quaternion Barrier Function)
+- A specialized controller designed for the Rattle system
+- Uses quaternion-based representation for attitude control
+- Includes training, experimentation, and evaluation scripts
+- Features Mujoco physics integration for realistic simulation
+- Known limitations:
+  - Z-axis offset issues
+  - Quaternion controllability challenges in the control affine system
+  - Mujoco implementation currently shows steering discrepancies compared to direct evaluation
+
+### Additional Components
+- `RPO_Tests/`: Rendezous Proximity Operations test implementations
+- `euler_attempt/`: Alternative approach using Euler angles
+- `Other_controller/`: Additional control implementations
+
+## Neural CLBF Implementation (found in `neural_clbf` folder)
+
+The Neural Control Lyapunov Barrier Function (Neural CLBF) implementation provides:
+- Integration of neural networks with control theory
+- Safe and stable control of dynamical systems
+- Training scripts for various scenarios (e.g., inverted pendulum)
+- Evaluation tools and visualization capabilities
+- Tensorboard integration for training monitoring
+
 ## Results and Analysis
 
 The repository contains extensive simulation results and comparisons between different control strategies. The results are documented through:
